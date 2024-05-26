@@ -64,7 +64,7 @@ var typedSpans = document.querySelectorAll('.multiple-text');
 
 typedSpans.forEach(function(span) {
     var typed = new Typed(span, {
-        strings: ['Full Stack Web Developer', 'Software Developer'],
+        strings: ['Full Stack Web Developer', 'Software Developer', 'Freelancer'],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
