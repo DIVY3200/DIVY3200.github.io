@@ -1,495 +1,397 @@
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Divyansh Kaushal</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./mediaquery.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+      rel='stylesheet'>
+    <link rel="icon" type="image/png" sizes="216x216"
+      href="./images/Favicon.png">
+  </head>
 
-<body>
-    <header>
-        <nav class="container nav-img">
-            <div class="main-nav sidebar">
-                <ul class="flex">
-                    <li onclick="hideSidebar()">
-                        <h2 style="text-align: center; padding-top: 20px;"><a href="#"><i
-                                    class="fa-solid fa-xmark link-hover" style="color: white;"></i></a></h2>
-                    </li>
-                    <li onclick="hideSidebar()"><a style="color: white;" href="#" class="link-hover active">Home</a>
-                    </li>
-                    <li onclick="hideSidebar()"><a style="color: white;" href="#about" class="link-hover">About Me</a>
-                    </li>
-                    <li onclick="hideSidebar()"><a style="color: white;" href="#skills" class="link-hover">Skills</a>
-                    </li>
-                    <li onclick="hideSidebar()"><a style="color: white;" href="#projects"
-                            class="link-hover">Projects</a></li>
-                </ul>
-                <div class="nav-contact link-hover">
-                    <a href="#contacts" style="color: white !important;">Contact Me</a>
-                </div>
-            </div>
-            <div class="main-nav flex">
-                <ul class="flex">
-                    <li><a href="#" class="my-logo">
-                            <img src="./images/my-logo.png" alt="#">
-                        </a></li>
-                    <li class="hideOnMobile"><a href="#" class="hover-links active">Home</a></li>
-                    <li class="hideOnMobile"><a href="#about" class="hover-links">About Me</a></li>
-                    <li class="hideOnMobile"><a href="#skills" class="hover-links">Skills</a></li>
-                    <li class="hideOnMobile"><a href="#projects" class="hover-links">Projects</a></li>
-                </ul>
-                <div class="nav-contact hideOnMobile">
-                    <a href="#contacts" style="color: white !important;">Contact Me</a>
-                </div>
-                <a onclick="showSidebar()" href="#" class="nav-toggle hover-links"><i class="fa-solid fa-bars"></i></a>
-            </div>
-        </nav>
-        <div class="container header-section flex">
-            <div class="header-left flex">
-                <h2><span class="multiple-text">Full stack Web Developer</span></h2>
-                <h1>Divyansh Kaushal</h1>
-                <p>I'm <span class="multiple-text"></span> <br>and I'm remotely work from <br>North India</p>
-            </div>
-            <div class="header-right flex">
-                <img src="./images/me.png" alt="#">
+  <body>
+    <!-- header design -->
+    <header class="header">
+      <a href="#" class="logo">Divyansh <span class="animate"
+          style="--i:1;">Kaushal</span></a>
+      <div class="bx bx-menu" id="menu-icon"><span class="animate"
+          style="--i:2;"></span></div>
 
-                <div class="social-link">
-                    <ul class="flex">
-                        <li><a class="logo-img" href="https://github.com/DIVY3200"><svg style="filter: brightness(2);"
-                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
-                                    viewBox="0,0,256,256" style="fill:#000000;">
-                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <g transform="scale(5.12,5.12)">
-                                            <path
-                                                d="M25,2c-12.68866,0 -23,10.31134 -23,23c0,12.68867 10.31134,23 23,23c12.68867,0 23,-10.31133 23,-23c0,-12.68866 -10.31133,-23 -23,-23zM25,4c11.60734,0 21,9.39266 21,21c0,0.07137 -0.00515,0.14169 -0.00586,0.21289c-0.63961,-0.05904 -1.37863,-0.11511 -2.31836,-0.14844c-1.32872,-0.04712 -3.00352,-0.03347 -4.90234,0.06055c0.07041,-0.49035 0.11977,-0.98762 0.12109,-1.49805c0.09683,-1.87262 -0.53201,-3.62449 -1.55469,-5.17187c0.24707,-0.85373 0.5369,-1.93986 0.60938,-3.17187c0.0826,-1.40428 -0.03862,-2.96144 -1.16602,-4.01367l-0.28906,-0.26953h-0.39453c-2.68307,0 -4.51959,1.12321 -5.64258,2.01367c-1.6215,-0.62765 -3.44481,-1.01367 -5.45703,-1.01367c-2.02363,0 -3.86447,0.39142 -5.55273,1.01758c-1.12235,-0.89089 -2.96048,-2.01758 -5.64648,-2.01758h-0.39258l-0.28906,0.26758c-1.09819,1.01974 -1.19936,2.53418 -1.13086,3.93164c0.06041,1.23229 0.33345,2.35292 0.57617,3.24805c-1.03996,1.57759 -1.66406,3.37475 -1.66406,5.15234c0,0.51163 0.04758,1.01046 0.11719,1.50195c-1.80576,-0.08375 -3.41548,-0.09989 -4.69336,-0.05469c-0.9397,0.03324 -1.67878,0.08884 -2.31836,0.14844c-0.0006,-0.06534 -0.00586,-0.12983 -0.00586,-0.19531c0,-11.60733 9.39266,-21 21,-21zM14.39648,13.13086c2.01758,0.19118 3.53551,1.09211 4.23828,1.7168l0.46875,0.41406l0.57813,-0.23633c1.58145,-0.65119 3.34534,-1.02539 5.31836,-1.02539c1.97302,0 3.73739,0.37608 5.19922,1.01563l0.58594,0.25781l0.47852,-0.42578c0.70301,-0.6249 2.22351,-1.5261 4.24219,-1.7168c0.2684,0.44498 0.50163,1.07781 0.44531,2.03516c-0.0674,1.14572 -0.37387,2.39364 -0.60547,3.13477l-0.15039,0.48242l0.29883,0.4082c0.98947,1.34928 1.49398,2.80953 1.4082,4.35352l-0.00195,0.02734v0.02734c0,2.49545 -0.89861,4.49273 -2.8125,5.97266c-1.91384,1.47993 -4.93523,2.42773 -9.1875,2.42773c-4.25227,0 -7.27556,-0.94781 -9.18945,-2.42773c-1.91389,-1.47993 -2.81055,-3.4772 -2.81055,-5.97266c0,-1.46471 0.52892,-3.07601 1.50586,-4.4082l0.29297,-0.39844l-0.14062,-0.47461c-0.23173,-0.78787 -0.51577,-2.06426 -0.57227,-3.2168c-0.04699,-0.95862 0.17989,-1.56453 0.41016,-1.9707zM8.88477,26.02148c0.70669,0.00903 1.51669,0.04717 2.32813,0.08789c0.07753,0.3118 0.16593,0.61852 0.27344,0.91797c-3.30736,0.06975 -5.7816,0.40233 -7.30664,0.6875c-0.06448,-0.50035 -0.11584,-1.00482 -0.14453,-1.51562c1.12705,-0.10696 2.71584,-0.20499 4.84961,-0.17773zM41.11523,26.03711c2.13229,-0.02708 3.72049,0.07105 4.84766,0.17773c-0.02866,0.50348 -0.07914,1.00082 -0.14258,1.49414c-1.57954,-0.28977 -4.12064,-0.6223 -7.51367,-0.67578c0.1053,-0.29353 0.19299,-0.59498 0.26953,-0.90039c0.89512,-0.04798 1.76839,-0.08592 2.53906,-0.0957zM11.91211,28.01953c0.59674,1.1958 1.44941,2.26349 2.57617,3.13477c1.54054,1.19123 3.54334,2.02354 5.98828,2.46875c-0.31986,0.32865 -0.61078,0.68955 -0.86914,1.07031l-0.06055,-0.05273c0.0055,-0.0063 -0.49713,0.24525 -1.24805,0.3125c-0.75092,0.06725 -1.67721,0.04688 -2.49805,0.04688c-1.225,0 -1.76457,-0.57879 -2.62695,-1.63281c-0.47755,-0.64363 -1.05973,-1.16486 -1.625,-1.56055c-0.57881,-0.40517 -1.07257,-0.69113 -1.68359,-0.79297l-0.08203,-0.01367h-0.08398c-0.46667,0 -0.91824,0.03379 -1.33984,0.51563c-0.2108,0.24092 -0.3561,0.68694 -0.26172,1.06445c0.09438,0.37752 0.3332,0.6095 0.54688,0.75195c1.36672,0.91115 1.60826,2.71448 2.46484,4.31836c0.79992,1.59392 2.52629,2.34961 4.29102,2.34961h2.59961v4.80273c-7.03219,-2.4822 -12.33532,-8.59812 -13.66797,-16.09961c1.5309,-0.28835 4.09451,-0.63502 7.58008,-0.68359zM37.88281,28.02734c3.56273,0.0305 6.19824,0.37672 7.78711,0.66992c-1.33087,7.50424 -6.63585,13.6226 -13.66992,16.10547v-5.20312c0,-1.58457 -0.52036,-3.3319 -1.42578,-4.78906c-0.2749,-0.44241 -0.59827,-0.86081 -0.95898,-1.23633c2.31522,-0.45738 4.21713,-1.2754 5.69727,-2.41992c1.12432,-0.86939 1.97509,-1.93387 2.57031,-3.12695zM23.69922,34.09961h2.80078c0.81282,0 1.68042,0.64779 2.375,1.76563c0.69458,1.11783 1.125,2.61894 1.125,3.73438v5.79883c-1.60259,0.3908 -3.27621,0.60156 -5,0.60156c-1.72379,0 -3.39741,-0.21077 -5,-0.60156v-5.79883c0,-1.09074 0.46783,-2.5883 1.20898,-3.71094c0.74116,-1.12264 1.67741,-1.78906 2.49023,-1.78906zM12.30859,35.28125c0.86577,0.89801 1.91393,1.71875 3.49219,1.71875c0.77917,0 1.7517,0.02807 2.67578,-0.05469c0.00329,-0.00029 0.00648,-0.00166 0.00977,-0.00195c-0.12175,0.35 -0.21258,0.70217 -0.28906,1.05664h-2.79687c-1.23333,0 -2.10462,-0.44557 -2.50586,-1.24805l-0.00781,-0.01367l-0.00586,-0.01172c-0.1644,-0.30537 -0.38021,-0.91597 -0.57226,-1.44531z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg></a></li>
-                        <li><a class="logo-img" href="https://www.linkedin.com/in/divyansh-kaushal-165494230/"><svg
-                                    style="filter: brightness(2);" x="0px" y="0px" width="20" height="20"
-                                    viewBox="0,0,256,256" style="fill:#000000;">
-                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <g transform="scale(8.53333,8.53333)">
-                                            <path
-                                                d="M24,4h-18c-1.105,0 -2,0.895 -2,2v18c0,1.105 0.895,2 2,2h18c1.105,0 2,-0.895 2,-2v-18c0,-1.105 -0.895,-2 -2,-2zM10.954,22h-2.95v-9.492h2.95zM9.449,11.151c-0.951,0 -1.72,-0.771 -1.72,-1.72c0,-0.949 0.77,-1.719 1.72,-1.719c0.948,0 1.719,0.771 1.719,1.719c0,0.949 -0.771,1.72 -1.719,1.72zM22.004,22h-2.948v-4.616c0,-1.101 -0.02,-2.517 -1.533,-2.517c-1.535,0 -1.771,1.199 -1.771,2.437v4.696h-2.948v-9.492h2.83v1.297h0.04c0.394,-0.746 1.356,-1.533 2.791,-1.533c2.987,0 3.539,1.966 3.539,4.522z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg></a></li>
-                        <li><a class="logo-img" href="https://leetcode.com/u/DK_3200/"><svg
-                                    style="filter: brightness(2);" x="0px" y="0px" width="20" height="20"
-                                    viewBox="0,0,256,256" style="fill:#000000;">
-                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <g transform="scale(16,16)">
-                                            <path
-                                                d="M10.44727,0.26563c-0.13004,0.00413 -0.25335,0.05878 -0.34375,0.15234l-4.44727,4.44922l-2.56055,2.55859c-0.05137,0.05015 -0.09134,0.11076 -0.11719,0.17773c-1.20865,1.37039 -1.19195,3.4604 0.11719,4.76953l2.56055,2.56055c1.36138,1.36138 3.58588,1.36138 4.94727,0l2.25,-2.25c0.12632,-0.12664 0.17547,-0.31106 0.12895,-0.48378c-0.04653,-0.17271 -0.18167,-0.30748 -0.35451,-0.35354c-0.17284,-0.04605 -0.35712,0.00361 -0.48342,0.13028l-2.25,2.25c-0.97862,0.97862 -2.55263,0.97862 -3.53125,0l-2.56055,-2.56055c-0.97862,-0.97862 -0.97862,-2.55459 0,-3.5332l2.56055,-2.55859c0.97862,-0.97862 2.55263,-0.97862 3.53125,0l2.25,2.25c0.19524,0.19578 0.51223,0.19622 0.70801,0.00098c0.19578,-0.19524 0.19622,-0.51223 0.00098,-0.70801l-2.25,-2.25c-0.69283,-0.69282 -1.60914,-1.02407 -2.52148,-1.01172l2.73047,-2.73047c0.14893,-0.14387 0.19378,-0.36466 0.11278,-0.55523c-0.08099,-0.19058 -0.27107,-0.31152 -0.47802,-0.30414zM7.32813,9.40039c-0.18031,-0.00254 -0.34803,0.09219 -0.43893,0.24794c-0.0909,0.15575 -0.0909,0.34837 0,0.50412c0.0909,0.15575 0.25862,0.25049 0.43893,0.24794h6.90039c0.18031,0.00254 0.34803,-0.09219 0.43893,-0.24794c0.0909,-0.15575 0.0909,-0.34837 0,-0.50412c-0.0909,-0.15575 -0.25862,-0.25049 -0.43893,-0.24794z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg></a></li>
-                        <li><a class="logo-img" href="https://www.codechef.com/users/dk3200"><svg
-                                    style="filter: brightness(2);" x="0px" y="0px" width="20" height="20"
-                                    viewBox="0,0,256,256" style="fill:#000000;">
-                                    <g fill="#31164a" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <g transform="scale(5.33333,5.33333)">
-                                            <path
-                                                d="M35.178,33.008l0.073,0.026l-0.751,-0.326c-0.253,-0.115 -0.525,-0.182 -0.803,-0.197c-0.076,-0.01 -0.152,-0.01 -0.228,0c-0.148,0.013 -0.285,0.086 -0.378,0.202c-0.113,0.096 -0.185,0.231 -0.202,0.378c-0.011,0.032 -0.011,0.066 0,0.098c0.334,0.353 0.762,0.603 1.233,0.72c0.471,0.145 0.943,0.285 1.404,0.414c0.467,0.155 0.864,0.471 1.119,0.891c0.005,0.019 0.005,0.038 0,0.057c0,0.088 -0.212,0.233 -0.622,0.44c-0.207,0.119 -0.518,0.383 -1.036,0.777c-0.323,0.264 -0.67,0.498 -1.036,0.699c-0.311,0.139 -0.583,0.352 -0.793,0.622c-0.005,0.005 -0.009,0.01 -0.013,0.015c-0.165,0.19 -0.145,0.478 0.044,0.643c0.099,0.095 0.231,0.147 0.368,0.145c0.098,-0.002 0.193,-0.027 0.28,-0.073c0.668,-0.421 1.31,-0.883 1.922,-1.383c0.621,-0.514 1.267,-0.997 1.937,-1.445c0.373,-0.228 0.554,-0.466 0.554,-0.71c-0.012,-0.163 -0.1,-0.311 -0.238,-0.399c-0.816,-0.733 -1.784,-1.278 -2.834,-1.594zM14.183,37.742l-2.144,-0.942c-0.711,-0.302 -1.404,-0.648 -2.072,-1.036c0.469,-0.584 1.1,-1.016 1.813,-1.243c0.709,-0.228 1.363,-0.6 1.922,-1.093c0.08,-0.077 0.125,-0.184 0.124,-0.295c-0.004,-0.157 -0.078,-0.303 -0.202,-0.399c-0.148,-0.114 -0.331,-0.174 -0.518,-0.171h-0.3c-0.662,0.497 -1.386,0.904 -2.155,1.212c-0.762,0.314 -1.483,0.717 -2.15,1.202c-0.323,0.289 -0.511,0.701 -0.518,1.134c0.038,0.164 0.154,0.3 0.311,0.363c0.14,0.047 0.285,0.104 0.425,0.161c1.416,0.601 2.745,1.247 3.989,1.937c0.165,0.12 0.32,0.251 0.466,0.394c0.095,0.041 0.197,0.063 0.3,0.062c0.255,0.002 0.503,-0.086 0.699,-0.249c0.2,-0.143 0.305,-0.383 0.275,-0.627c0.008,-0.179 -0.098,-0.343 -0.265,-0.41zM21.984,32.531v-0.01c-0.176,-0.274 -0.397,-0.518 -0.653,-0.72c-0.205,-0.143 -0.45,-0.217 -0.699,-0.212c-0.084,-0.002 -0.167,0.014 -0.243,0.047l-1.554,0.518c-0.099,0.031 -0.202,0.045 -0.306,0.041c-0.184,0.013 -0.367,-0.038 -0.518,-0.145c-0.188,-0.164 -0.348,-0.358 -0.471,-0.575l-0.43,0.29c0.182,0.305 0.417,0.575 0.694,0.798c0.218,0.137 0.473,0.204 0.73,0.192c0.131,-0.001 0.262,-0.02 0.388,-0.057l1.435,-0.518c0.097,-0.038 0.201,-0.057 0.306,-0.057c0.158,-0.01 0.314,0.032 0.445,0.119c0.181,0.148 0.338,0.322 0.466,0.518zM26.403,40.861c-2.346,-0.13 -2.808,1.906 -1.171,3.367c2.367,2.129 8.127,1.663 7.34,-3.051c-2.89,2.455 -4.097,-0.207 -6.169,-0.316zM21.239,40.861c-2.072,0.109 -3.279,2.771 -6.169,0.316c-0.787,4.714 4.973,5.18 7.34,3.051c1.636,-1.461 1.175,-3.497 -1.171,-3.367zM19.757,34.065c-0.418,-0.016 -0.825,0.133 -1.134,0.414c-0.35,0.343 -0.498,0.842 -0.394,1.321c0.051,0.451 0.231,0.877 0.518,1.228c0.244,0.327 0.628,0.519 1.036,0.518c0.267,-0.005 0.529,-0.076 0.761,-0.207c0.466,-0.28 0.694,-0.808 0.694,-1.601c0.06,-0.52 -0.128,-1.038 -0.508,-1.399c-0.288,-0.19 -0.628,-0.285 -0.973,-0.274zM19.736,36.214c-0.286,0 -0.518,-0.232 -0.518,-0.518c0,-0.286 0.232,-0.518 0.518,-0.518c0.286,0 0.518,0.232 0.518,0.518c0,0.286 -0.232,0.518 -0.518,0.518zM24.984,40.182c0.106,-0.085 0.204,-0.179 0.295,-0.28c0.085,-0.096 0.162,-0.2 0.228,-0.311c0.063,-0.097 0.118,-0.2 0.166,-0.306c0.036,-0.077 0.066,-0.156 0.088,-0.238v-0.047c-0.011,-0.014 -0.019,-0.03 -0.026,-0.047c-0.135,0.207 -0.303,0.391 -0.497,0.544c-0.149,0.14 -0.325,0.248 -0.518,0.316c-0.195,0.067 -0.4,0.101 -0.606,0.098c-0.175,0.003 -0.35,-0.021 -0.518,-0.073c-0.144,-0.046 -0.279,-0.116 -0.399,-0.207c-0.121,-0.097 -0.231,-0.209 -0.326,-0.332c-0.1,-0.135 -0.187,-0.279 -0.259,-0.43c-0.011,0.012 -0.02,0.026 -0.026,0.041c0,0 0,0.031 0,0.041c0.071,0.198 0.161,0.389 0.269,0.57c0.098,0.174 0.22,0.332 0.363,0.471c0.128,0.134 0.279,0.244 0.445,0.326c0.164,0.069 0.34,0.108 0.518,0.114l0.021,0.021c0.143,0.001 0.286,-0.026 0.42,-0.078c0.128,-0.046 0.25,-0.112 0.362,-0.193zM27.827,37.515c0.267,-0.004 0.529,-0.075 0.761,-0.207c0.51,-0.364 0.778,-0.979 0.699,-1.601c-0.026,-0.699 -0.192,-1.171 -0.518,-1.399c-0.288,-0.192 -0.628,-0.289 -0.974,-0.28c-0.419,-0.014 -0.826,0.136 -1.134,0.42c-0.348,0.344 -0.495,0.843 -0.388,1.321c0.048,0.451 0.228,0.879 0.518,1.228c0.245,0.326 0.629,0.518 1.036,0.518zM27.631,35.235c0.286,0 0.518,0.232 0.518,0.518c0,0.286 -0.232,0.518 -0.518,0.518c-0.286,0 -0.518,-0.232 -0.518,-0.518c0,-0.286 0.232,-0.518 0.518,-0.518zM33.713,29.175c0.196,-0.997 0.27,-2.576 0.212,-3.919l0.05,-0.245c0.071,-0.349 0.144,-0.701 0.218,-1.052c0.726,-1.586 2.016,-3.155 3.265,-4.674c2.083,-2.533 4.238,-5.152 4.044,-8.201c-0.013,-0.203 -0.067,-0.402 -0.16,-0.584c-0.308,-0.605 -0.647,-1.19 -1.068,-1.842l-0.085,-0.134c-0.098,-0.152 -0.196,-0.305 -0.297,-0.45c-0.074,-0.105 -0.148,-0.204 -0.223,-0.303l-0.092,-0.123c-0.156,-0.209 -0.312,-0.415 -0.467,-0.604c-0.075,-0.093 -0.151,-0.18 -0.289,-0.338c-0.177,-0.205 -0.355,-0.402 -0.538,-0.592l-0.241,-0.243c-0.21,-0.208 -0.421,-0.405 -0.623,-0.582l-0.155,-0.136c-2.626,-2.239 -5.3,-2.825 -6.927,-3.181l-0.897,-0.202c-2.788,-0.534 -5.791,-0.97 -8.86,-0.53c-0.036,0.006 -0.072,0.012 -0.108,0.02c-1.176,0.257 -2.31,0.669 -3.295,1.188c-1.179,0.535 -2.398,1.09 -3.443,1.164c-0.09,0.006 -0.18,0.021 -0.268,0.044c-1.733,0.446 -3.227,1.517 -4.18,2.975l-0.143,0.207c-0.048,0.067 -0.09,0.139 -0.125,0.213c-0.837,1.75 -1.06,3.754 -0.627,5.644c0.008,0.035 0.017,0.069 0.028,0.104c0.275,0.902 0.602,1.763 0.917,2.594l0.106,0.276c0.714,1.676 1.233,3.438 1.544,5.236c0.025,0.146 0.072,0.287 0.139,0.42c0.293,0.581 0.523,1.196 0.683,1.827c0.004,0.016 0.028,0.101 0.033,0.117c0.074,0.254 0.149,0.515 0.229,0.777c0.031,0.1 0.071,0.194 0.119,0.282c0.014,0.083 0.024,0.167 0.052,0.249l1.318,3.769c0.142,0.404 0.449,0.729 0.844,0.892c0.396,0.162 0.841,0.148 1.227,-0.037c2.406,-1.17 8.039,-3.906 15.817,0.958c0.242,0.151 0.518,0.229 0.795,0.229c0.203,0 0.406,-0.041 0.597,-0.124c0.452,-0.199 0.78,-0.605 0.874,-1.089zM38.513,11.562c-0.058,1.79 -1.67,3.75 -3.371,5.818c-0.309,0.376 -0.62,0.757 -0.927,1.14c1.124,-2.914 2.201,-5.829 3.18,-8.779l0.039,0.053c0.077,0.11 0.152,0.229 0.228,0.347l0.093,0.146c0.292,0.452 0.537,0.864 0.758,1.275zM35.437,7.54c0.166,0.145 0.332,0.301 0.494,0.462l0.194,0.195c0.144,0.149 0.286,0.308 0.428,0.471c0.001,0.002 0.066,0.077 0.068,0.078l0.167,0.196c0.09,0.11 0.178,0.228 0.266,0.345c-1.627,1.372 -3.858,6.483 -4.474,11.472c-0.169,0.257 -0.34,0.512 -0.494,0.776c-0.676,-0.448 -1.536,-0.845 -2.587,-1.179c-0.2,-0.064 -0.416,-0.121 -0.628,-0.18c0.149,-2.12 0.346,-4.308 0.538,-6.303c0.637,-3.375 2.224,-5.181 2.933,-8.222c0.947,0.372 1.963,0.92 2.983,1.79zM29.726,4.909c0.644,0.141 1.395,0.312 2.202,0.594c-1.39,2.614 -2.329,5.447 -2.774,8.381c-0.311,2.065 -0.466,4.148 -0.49,6.234c-1.169,-0.308 -2.5,-0.533 -3.897,-0.646c-0.041,-1.02 -0.064,-1.996 -0.021,-2.583c0.158,-2.187 0.341,-8.74 1.566,-12.598c0.81,0.11 1.643,0.25 2.518,0.417zM26.126,4.265c-2.633,4.386 -2.254,10.092 -1.601,15.187c-0.949,-0.068 -1.923,-0.083 -2.898,-0.031c-0.521,-3.135 -1.057,-6.924 -1.519,-9.945c-0.146,-1.439 -0.019,-2.892 0.373,-4.284c0.177,-0.381 0.279,-0.684 0.372,-0.928c0.07,-0.017 0.137,-0.045 0.207,-0.061c1.655,-0.23 3.301,-0.167 5.066,0.062zM18.495,5.143c0.532,-0.279 1.095,-0.493 1.668,-0.676c-0.14,0.259 -0.26,0.552 -0.356,0.881c-0.35,1.447 -0.469,2.94 -0.352,4.424c0.219,3.282 0.796,6.523 1.676,9.686c-0.911,0.069 -1.815,0.195 -2.689,0.392c-0.51,-2.158 -0.421,-4.552 -0.62,-6.795c-0.21,-2.68 -1.073,-5.216 -2.179,-6.786c0.983,-0.29 1.941,-0.711 2.852,-1.126zM14.104,6.592c0.464,-0.044 0.922,-0.148 1.377,-0.273c1.078,1.567 1.303,4.042 1.545,6.74c0.196,2.26 0.414,4.672 1.161,6.846c-0.742,0.18 -1.462,0.409 -2.141,0.696c-0.473,-1.914 -0.737,-4.005 -1.128,-5.916c-0.58,-2.828 -0.658,-5.361 -1.616,-6.133c-0.282,-0.39 -0.923,-0.457 -0.996,-0.888c0.496,-0.5 1.11,-0.874 1.798,-1.072zM14.424,21.466c-0.151,-0.438 -0.319,-0.87 -0.52,-1.288c-0.354,-1.952 -0.925,-3.861 -1.679,-5.629l-0.084,-0.222c-0.292,-0.769 -0.593,-1.563 -0.836,-2.352c-0.258,-1.18 -0.127,-2.426 0.372,-3.526l0.095,-0.137c0.08,-0.122 0.177,-0.227 0.268,-0.339c-0.003,0.076 -0.019,0.151 -0.012,0.227c0.03,0.188 0.104,0.365 0.218,0.518c0.948,0.756 1.44,3.16 2.015,5.978c0.398,1.95 0.859,4.085 1.524,6.031c-0.479,0.216 -0.932,0.463 -1.361,0.739zM22.646,24.365c-2.859,0 -5.176,0.746 -6.8,1.433l-0.466,-1.331c2.167,-1.862 6.097,-2.271 9.242,-2.005c3.502,0.3 5.826,1.354 6.218,1.896c0.031,0.204 0.052,0.447 0.07,0.704c-0.034,0.209 -0.022,0.414 0.028,0.608c0.007,0.252 0.01,0.508 0.007,0.769c-3.093,-1.543 -5.89,-2.074 -8.299,-2.074z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg></a></li>
+      <nav class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
 
-                        <li><a class="logo-img" href="https://codeforces.com/profile/Divy3200"><svg width="20"
-                                    height="20" viewBox="0 0 24 24" style="fill:#361E4C;">
-                                    <path
-                                        d="M6 21H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1zm7 0h-3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1zm7 0h-3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1z">
-                                    </path>
-                                </svg></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <span class="active-nav"></span>
+        <span class="animate" style="--i:2;"></span>
+      </nav>
     </header>
 
-    <section class="about-section" id="about">
-        <div class="container flex main-about">
-            <div class="about-image">
-                <img src="./images/about.png" alt="#">
-            </div>
-            <div class="about-desc flex">
-                <h1>About Me&nbsp;<i class="fa-solid fa-arrow-right"></i></h1>
-                <p>
-                    Hello, I'm Divyansh Kaushal a Full Stack Developer, my expertise is also lie on Machine Learning.
-                    I've been on an incredible journey of growth and learning. Right now I have worked in three project
-                    with my colleague in Daily Expense Tracker, Real time people count and Read Smart - Personalised
-                    Book Recommedation System. When I'm not immersed in my expertise, you'll find me in Playing Cricket,
-                    Travelling, Gymming & Listening Music.</p>
-                <div class="nav-contact">
-                    <a href="#contacts" style="color: white !important;">Contact Me</a>
-                </div>
-            </div>
+    <!-- home section design -->
+
+    <section class="home" id="home">
+      <div class="main-container show-animate">
+        <div class="image">
+          <img src="images/me.png" alt="Divyansh Kaushal">
+          <span class="animate" style="--i:1;"></span>
         </div>
+        <div class="home-content">
+          <h1>Hey I'm <span>Divyansh</span><span class="animate"
+              style="--i:2;"></span></h1>
+          <div class="typewriter">I'm a <span
+              class="typewriter-text"></span><label for>|</label>
+            <span class="animate" style="--i:2;"></span>
+          </div>
+          <p>AI/ML-focused Computer Science & Engineering
+            student with hands-on experience in software development, database
+            engineering, and machine learning. Proficient in Python, C++,
+            JavaScript, and the MERN stack. Successfully developed scalable web
+            applications and optimized data pipelines. Led projects such as an
+            IPO web app and a machine learning-powered pricing engine. A
+            problem-solver with strong analytical skills, eager to contribute to
+            innovative projects in fintech and technology.
+            <span class="animate" style="--i:3;"></span></p>
+          <div class="social-links">
+            <a href="https://github.com/DIVY3200" target="_blank"><i
+                class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/idivyanshkaushal/" target="_blank"><i
+                class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/divyansh-kaushal-165494230" target="_blank"><i
+                class="bx bxl-linkedin"></i></a>
+            <a href="https://x.com/Divyans14586751" target="_blank"><i
+                class="bx bxl-twitter"></i></a>
+            <span class="animate" style="--i:4;"></span>
+          </div>
+
+          <div class="btn-box btns">
+            <a href="https://drive.google.com/file/d/1wMjsi9pX8t0Vhq0Jmv0vrMbZEf5h-jew/view?usp=sharing" class="btn" download target="_blank">Download CV <i
+                class='bx bx-cloud-download'></i><span class="animate"
+                style="--i:5;"></span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="skill-section" id="skills">
-        <div class="skill-header flex container">
-            <h1>My Skills</h1>
-            <h1><i class="fa-solid fa-arrow-left"></i></h1>
+    <!-- about section design -->
+
+    <section class="about" id="about">
+      <h2 class="heading">About <span>Me</span><span class="animate scroll"
+          style="--i:1;"></span></h2>
+
+      <div class="about-img">
+        <img src="images/me2.jpeg" alt>
+        <span class="circle-spin"></span>
+        <span class="animate scroll" style="--i:2;"></span>
+      </div>
+
+      <div class="about-content">
+        <h3>Full Stack Developer <span class="animate scroll"
+            style="--i:3;"></span></h3>
+        <p>Passionate and results-driven Computer Science & Engineering student <br>
+          with hands-on experience in software development, data engineering, <br>
+          and machine <span id="dots">...</span><span id="more"> learning. Skilled in Python, C++, JavaScript, and the MERN <br>
+          stack, with a proven track record of building scalable web <br>
+          applications and optimizing data pipelines. Demonstrated leadership in <br>
+          driving complex projects, including a data-driven IPO web app at <br>
+          Bluestock Fintech and a machine learning-based dynamic pricing engine. <br>
+          Strong analytical thinker with a focus on problem-solving, automation, <br>
+          and innovation in fast-paced environments. Eager to contribute <br>
+          technical expertise and a proactive attitude to cutting-edge projects <br>
+          in the fintech and technology space.</span>
+          <span class="animate scroll" style="--i:4;"></span>
+        </p>
+
+        <div class="btn-box btns">
+          <a onclick="myFunc()" class="btn" id="myBtn">Read More</a>
+          <span class="animate scroll" style="--i:5;"></span>
         </div>
-
-        <div class="skill-circle flex container">
-            <div class="container">
-                <h2 class="heading">Technical Skills</h2>
-                <div class="technical-bars">
-                    <div class="bar">
-                        <i class='bx bxl-html5'></i>
-                        <div class="info">
-                            <span>HTML</span>
-                        </div>
-                        <div class="progress-line html">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar">
-                        <i class='bx bxl-css3'></i>
-                        <div class="info">
-                            <span>CSS<span>
-                        </div>
-                        <div class="progress-line css">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar">
-                        <i class='bx bxl-javascript'></i>
-                        <div class="info">
-                            <span>Javascript</span>
-                        </div>
-                        <div class="progress-line javascript">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar">
-                        <i class='bx bxl-nodejs'></i>
-                        <div class="info">
-                            <span> Nodejs</span>
-                        </div>
-                        <div class="progress-line nodejs">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar">
-                        <i class='bx bxl-react'></i>
-                        <div class="info">
-                            <span>React</span>
-                        </div>
-                        <div class="progress-line react">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar">
-                        <i class='bx bxl-mongodb'></i>
-                        <div class="info">
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="progress-line mongodb">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar">
-                        <i class="fa-solid fa-database"></i>
-                        <div class="info">
-                            <span>SQL</span>
-                        </div>
-                        <div class="progress-line sql">
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <div class="bar">
-                        <i class='bx bxl-c-plus-plus'></i>
-                        <div class="info">
-                            <span>C++</span>
-                        </div>
-                        <div class="progress-line cpp">
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <div class="bar">
-                        <i class='bx bxl-python'></i>
-                        <div class="info">
-                            <span>Python</span>
-                        </div>
-                        <div class="progress-line python">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <h2 class="heading">Professional Skills</h2>
-                <div class="radial-bars flex">
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">75%</div>
-                        <div class="text">Problem Solving</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">Leadership</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">95%</div>
-                        <div class="text">Time Management</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">75%</div>
-                        <div class="text">Communication</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <section class="projects-section" id="projects">
-        <div class="container">
-            <div class="project-header flex">
-                <h1>Projects</h1>
-                <h1><i class="fa-solid fa-arrow-down"></i></h1>
+    <!-- education section design -->
+
+    <section class="education" id="education">
+      <h2 class="heading">My <span>Journey</span><span class="animate scroll"
+          style="--i:1;"></span></h2>
+
+      <div class="education-row">
+        <div class="education-column">
+          <h3 class="title">Education <span class="animate scroll"
+              style="--i:2;"></span></h3>
+
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-calendar'></i> 2021-
+                  2025</div>
+                <h3>Bachelor - Pranveer Singh Institute of Technology</h3>
+                <p>Currently pursuing a Bachelor’s degree in Computer Science &
+                  <br>
+                  Engineering with a focus on Artificial Intelligence and <br>
+                  Machine Learning at Pranveer Singh Institute of Technology,
+                  <br>
+                  maintaining a CGPA of 7.10 up to the 6th semester.</p>
+              </div>
             </div>
 
-            <div class="carousel">
-                <!-- list item -->
-                <div class="list">
-                    <div class="item">
-                        <img src="images/image4.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">Daily Expense Tracker</div>
-                            <div class="des">
-                                <!-- lorem 50 -->
-                                Web application, is used to manage the application
-                                user's daily expenses in a more efficient and
-                                manageable way. Tool used is PHP, MYSQL, CSS,
-                                Apache. <a href="https://github.com/DIVY3200/Daily-Expense-Tracker"
-                                    style="color: orangered;">See more..</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/Jarvis.jpg" alt="divyansh">
-                        <div class="content">
-                            <div class="title">Jarvis: Virtual Assistant</div>
-                            <div class="des">
-                                <!-- lorem 50 -->
-                                It is a Jarvis RobotVirtual Assistant Website.You can ask Jarvis to anything and open it
-                                in your laptop or cell phone(like Youtube, Date
-                                and Time) - HTML, CSS, JavaScript. <a
-                                    href="https://github.com/DIVY3200/Jarvis-Virtual-Assistant-Website"
-                                    style="color: orangered;">See more..</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/image1.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">Clone Amazon Website</div>
-                            <div class="des">
-                                The Ecommerce Website made with HTML, CSS,
-                                javascript, Nodejs, Postgres, Reactjs, APIs. <a
-                                    href="https://github.com/DIVY3200/Amazon-Clone-Website"
-                                    style="color: orangered;">See
-                                    more..</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/image2.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">Real Time Vehicles Count</div>
-                            <div class="des">
-                                Developed a computer vision system using OpenCV to
-                                detect and count vehicles in real-time. I used
-                                technology like a OpenCV, Python, Machine
-                                Learning, Image Processing Technique, Tracking
-                                Algorithm. <a href="https://github.com/DIVY3200/Real-Time-Vehicle-Count"
-                                    style="color: orangered;">See more..</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/image3.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">Read Smart - Personalised Book Recommedation System</div>
-                            <div class="des">
-                                System that recommends book to users based on past
-                                reading history <br> and other factors.Tool used is HTML,
-                                CSS, Python, Numpy, Pandas, Flask, scikit-Learn. <a
-                                    href="https://github.com/DIVY3200/ReadSmart---Personalised-book-Recommendation-System"
-                                    style="color: orangered;">See more..</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- list thumnail -->
-                <div class="thumbnail flex">
-                    <div class="item">
-                        <img src="images/image4.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">
-                                Daily Expense Tracker
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/Jarvis.jpg" alt="divyansh">
-                        <div class="content">
-                            <div class="title">
-                                Jarvis: Virtual Assistant
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/image1.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">
-                                Clone Amazon Website
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/image2.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">
-                                Real Time Vehicles Count
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/image3.png" alt="divyansh">
-                        <div class="content">
-                            <div class="title">
-                                Read Smart - Personalised Book Recommedation System
-                            </div>
-                            <div class="description">
-                                Description
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- next prev -->
-
-                <div class="arrows">
-                    <button id="prev">
-                        < </button>
-                            <button id="next">></button>
-                </div>
-                <!-- time running -->
-                <div class="time"></div>
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-calendar'></i>2020</div>
+                <h3>Intermediate - SJS Public School</h3>
+                <p>I completed my Intermediate (XII) in 2020 from SJS Public
+                  <br>
+                  School, securing 80.6% in the Science stream with Physical
+                  <br>
+                  Education. This academic foundation gave me a solid <br>
+                  understanding of core subjects like Physics, Chemistry, and
+                  <br>
+                  Mathematics, while also emphasizing physical fitness and <br>
+                  overall development through Physical Education.</p>
+              </div>
             </div>
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-calendar'></i>2018</div>
+                <h3>High School - SJS Public School</h3>
+                <p>I completed my high school education with a strong academic
+                  <br>
+                  record, securing 80.4%. My subjects included English, Hindi,
+                  <br>
+                  Mathematics, Science, and Social Studies. This foundational
+                  <br>
+                  education equipped me with essential knowledge across diverse
+                  <br>
+                  disciplines and helped develop my analytical and <br>
+                  problem-solving skills.</p>
+              </div>
+            </div>
+            <span class="animate scroll" style="--i:3;"></span>
+          </div>
         </div>
+
+        <div class="education-column">
+          <h3 class="title">Experience <span class="animate scroll"
+              style="--i:5;"></span></h3>
+
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-calendar'></i> Aug 2024-
+                  Oct 2024</div>
+                <h3>SDE Intern - Bluestock</h3>
+                <p>Lead the Development of an IPO web application using
+                  Django,<br>
+                  Django REST Framework, and <br>
+                  PostgreSQL, improving data exchange by 30%. Optimized frontend
+                  <br>
+                  interfaces with HTML, CSS, JavaScript, <br>
+                  and Bootstrap 5, reducing onboarding time by 15% and enhancing
+                  <br>
+                  decision-making by 20%.</p>
+              </div>
+            </div>
+
+            <span class="animate scroll" style="--i:6;"></span>
+
+            <!-- <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-calendar'></i> 2017-
+                  2018</div>
+                <h3>Master degree - University</h3>
+                <p>iowdgetyervfehfgrtfrfn</p>
+              </div>
+            </div>
+            <div class="education-content">
+              <div class="content">
+                <div class="year"><i class='bx bxs-calendar'></i> 2017-
+                  2018</div>
+                <h3>Master degree - University</h3>
+                <p>iowdgetyervfehfgrtfrfn</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="form-section" id="contacts">
+    <!-- skills section design -->
 
-        <div class="form-header container">
-            <h1>Contact Me</h1>
-        </div>
-        <div class="container flex" style="justify-content: center;">
-            <div class="wrapper">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <div class="input-box flex">
-                        <input type="hidden" name="access_key" value="d6dd747a-f030-4207-a36f-20cffcaa7305">
+    <section class="skills" id="skills">
+      <h2 class="heading">My <span>Skills</span><span class="animate scroll"
+          style="--i:1;"></span></h2>
 
-                        <input type="text" name="name" placeholder="Full name..." class="contact-input" required>
+      <div class="skills-row">
+        <div class="skills-column">
+          <h3 class="title">Coding Skills<span class="animate scroll"
+              style="--i:2;"></span></h3>
 
-                        <input type="email" name="email" placeholder="Email..." class="contact-input" required>
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>HTML <span>98%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
 
-                        <textarea name="messege" placeholder="Enter your messege..." class="contact-input"
-                            required></textarea>
+              <div class="progress">
+                <h3>CSS <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
 
-                        <button type="submit" class="btn">Submit <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </form>
+              <div class="progress">
+                <h3>Bootstrap <span>88%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>JavaScript <span>85%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>MERN Stack <span>70%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>MySQL <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>PostgreSQL <span>85%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Restful APIs <span>75%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>C++ <span>98%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Python <span>95%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Operating System <span>95%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>DBMS <span>95%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Machine Learning Technique <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Artificial Intelligence <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
             </div>
+            <span class="animate scroll" style="--i:3;"></span>
+          </div>
         </div>
 
+        <div class="skills-column">
+          <h3 class="title">Professional Skills<span class="animate scroll"
+              style="--i:4;"></span></h3>
+
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>Leadership <span>98%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Teamwork <span>95%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Punctual <span>100%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Interpersonal Communication <span>90%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+            <span class="animate scroll" style="--i:5;"></span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container flex footer-flex">
-            <div class="footer-header flex">
-                <h1>Follow ME</h1>
-                <h1><i class="fa-solid fa-arrow-right"></i></h1>
-            </div>
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span><span class="animate scroll"
+          style="--i:1;"></span></h2>
 
-            <div class="footer-link">
-                <a href="https://www.linkedin.com/in/divyansh-kaushal-165494230/">
-                    <h3><i class="fa-brands fa-linkedin-in link-hover"></i></h3>
-                </a>
-                <a href="https://www.instagram.com/idivyanshkaushal/">
-                    <h3><i class="fa-brands fa-instagram link-hover"></i></h3>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100072803573606">
-                    <h3><i class="fa-brands fa-facebook link-hover"></i></h3>
-                </a>
-                <a href="https://x.com/Divyans14586751">
-                    <h3><i class="fa-brands fa-x-twitter link-hover"></i></h3>
-                </a>
-            </div>
+      <form action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key"
+          value="d6dd747a-f030-4207-a36f-20cffcaa7305">
+        <div class="input-box">
+          <div class="input-field">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <span class="focus"></span>
+            <span class="animate scroll" style="--i:1;"></span>
+          </div>
+
+          <div class="input-field">
+            <input type="text" name="email" placeholder="Email" required>
+            <span class="focus"></span>
+            <span class="animate scroll" style="--i:1;"></span>
+          </div>
         </div>
+
+        <div class="input-box">
+          <div class="input-field">
+            <input type="number" name="number" placeholder="Mobile Number"
+              required>
+            <span class="focus"></span>
+            <span class="animate scroll" style="--i:1;"></span>
+          </div>
+
+          <div class="input-field">
+            <input type="text" name="subject" placeholder="Subject" required>
+            <span class="focus"></span>
+            <span class="animate scroll" style="--i:1;"></span>
+          </div>
+        </div>
+
+        <div class="textarea-field">
+          <textarea name id cols="30" rows="10" placeholder="Your Messege"
+            required></textarea>
+          <span class="focus"></span>
+          <span class="animate scroll" style="--i:1;"></span>
+        </div>
+
+        <div class="btn-box btns">
+          <button type="submit" class="btn">Submit</button>
+          <span class="animate scroll" style="--i:1;"></span>
+        </div>
+      </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by Divyansh | All right reserved</p>
+      </div>
+
+      <div class="footer-iconType">
+        <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
     </footer>
 
-    <div class="subfooter">
-        <div class="container flex">
-            <a href="#" class="my-logo">
-                <img src="./images/my-logo.png" alt="Company Logo">
-            </a>
-            <ul class="flex">
-                <li><a href="#" class="hover-links">Home</a></li>
-                <li><a href="#about" class="hover-links">About Me</a></li>
-                <li><a href="#skills" class="hover-links">Skills</a></li>
-                <li><a href="#projects" class="hover-links">Projects</a></li>
-            </ul>
-        </div>
-        <p style="text-align: center; font-size: 1rem;">@2024 Divyansh Kaushal All right reserved</p>
-    </div>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://kit.fontawesome.com/0517857166.js" crossorigin="anonymous"></script>
-    <script src="./scripts.js"></script>
-</body>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({offset:0});</script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
