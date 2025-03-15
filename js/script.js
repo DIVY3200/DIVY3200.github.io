@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         element.addEventListener("click", function () {
             setTimeout(() => {
                 element.blur();
-            }, 100);
+            }, 0.1);
         });
     });
 });
